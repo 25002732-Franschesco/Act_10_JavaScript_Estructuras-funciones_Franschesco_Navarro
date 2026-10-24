@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/p1.css">
+</head>
+<body>
+    
+    <button onclick="toggleLogin()" class="menu-btn">☰</button>
+
+    <div id="cajaLogin" class="menu-oculto">
+        <p>Correo:</p>
+        <input type="email" id="correoInput" placeholder="Ingresa correo">
+        
+        <p>Contraseña:</p>
+        <input type="password" id="passInput" placeholder="Ingresa contraseña">
+        
+        <button onclick="entrarAlMenu()" class="btn-login">Iniciar Sesión</button>
+    </div>
+
+    <nav id="sidebar" class="sidebar">
+        <ul class="navigation">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/parteI.html">Parte I</a></li>
+            <li><a href="../html/parteII.html">Parte II</a></li>
+            <li><a href="../html/parteIII.html">Parte III</a></li>
+        </ul>
+    </nav>
+
+    <section class="intro-section">
+        <h1>Parte II: Ejercicios con While</h1>
+        <p>Parte de Ejercicios con Funciones Java</p>
+        
+        <div class="botones-menu">
+            <a href="#ejercicio1" class="btn-ejercicio">Ejercicio 1: Numeros Impares al 100</a>
+            <a href="#ejercicio2" class="btn-ejercicio">Ejercicio 2: Numero de *</a>
+            <a href="#ejercicio3" class="btn-ejercicio">Ejercicio 3: Tablas de Multiplicar</a>
+        </div>
+    </section>
+
+     <div class="ejerciciostotal">
+        <section id="ejercicio1" class="ejercicio-section">
+            <h3>1. Numeros Impares del 1 al 100</h3>
+            <button onclick="numerosImpartes()">Imprimir Numeros</button>
+            <p id="resultadowhile1"></p>
+        </section>
+     </div>
+
+     <div class="ejerciciostotal">
+        <section id="ejercicio2" class="ejercicio-section">
+            <h3>2. Imprimir el mismo numero de *</h3>
+            <input type="number" id="numAsteriscos" placeholder="Ingresa el número">
+            <button onclick="asteriscos()">Imprimir *</button>
+            <p id="resultadowhile2"></p>
+        </section>
+     </div>
+
+     <div class="ejerciciostotal">
+        <section id="ejercicio3" class="ejercicio-section">
+            <h3>3. Tablas de Multiplicar</h3>
+            <input type="number" id="numTabla" placeholder="Ingresa el número">
+            <button onclick="Tabla()">Mostrar Tabla</button>
+            <p id="resultadowhile3"></p>
+        </section>
+     </div>
+
+     <footer class="mi-footersito">
+        <div class="footer-contenido">
+            <div class="footer-lainfo">
+                <h3>Franschesco de Jesús Navarro Cruz</h3>
+                <p>Estudiante Desarrollado de Software Multiplataforma en la UTL</p>
+                <p>San Francisco del Rincón, Guanajuato, México</p>
+            </div>
+        
+        <div class="footer-abajo">
+            <p>&copy; 2026 Franschesco Navarro. Todos los derechos para mí.</p>
+        </div>
+    </footer>
+
+    <script src="../js/funciones.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>

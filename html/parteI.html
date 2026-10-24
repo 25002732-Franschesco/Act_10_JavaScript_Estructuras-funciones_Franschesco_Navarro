@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/p1.css">
+</head>
+<body>
+    
+    <button onclick="toggleLogin()" class="menu-btn">☰</button>
+
+    <div id="cajaLogin" class="menu-oculto">
+        <p>Correo:</p>
+        <input type="email" id="correoInput" placeholder="Ingresa correo">
+        
+        <p>Contraseña:</p>
+        <input type="password" id="passInput" placeholder="Ingresa contraseña">
+        
+        <button onclick="entrarAlMenu()" class="btn-login">Iniciar Sesión</button>
+    </div>
+
+    <nav id="sidebar" class="sidebar">
+        <ul class="navigation">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/parteI.html">Parte I</a></li>
+            <li><a href="../html/parteII.html">Parte II</a></li>
+            <li><a href="../html/parteIII.html">Parte III</a></li>
+        </ul>
+    </nav>
+
+    <section class="intro-section">
+        <h1>Parte I: Ejercicios Generales</h1>
+        <p>Parte de Ejercicios con Funciones Java</p>
+        
+        <div class="botones-menu">
+            <a href="#ejercicio1" class="btn-ejercicio">Ejercicio 1: Votación</a>
+            <a href="#ejercicio2" class="btn-ejercicio">Ejercicio 2: Suma de Números</a>
+            <a href="#ejercicio3" class="btn-ejercicio">Ejercicio 3: Ordenar Números</a>
+            <a href="#ejercicio4" class="btn-ejercicio">Ejercicio 4: Importe Neto</a>
+            <a href="#ejercicio5" class="btn-ejercicio">Ejercicio 5: Sueldo</a>
+        </div>
+    </section>
+
+    <hr>
+
+    <div class="ejerciciostotal">
+        <section id="ejercicio1" class="ejercicio-section">
+            <h3>1. Sistema de Votación</h3>
+            <p>Ingresa de que parte la ciudad eres. Norte, Centro o Sur.</p>
+            <input type="text" id="seccionInput" placeholder="Escribe norte, sur o centro">
+            <button onclick="votarSeccion()">Emitir Voto</button>
+            <p id="resultado1"></p>
+        </section>
+
+        <section id="ejercicio2" class="ejercicio-section">
+            <h3>2. Suma de Números Positivos</h3>
+            <p>Ingresa los numeros que quieas, excepto numeros negativos o el numero 0, ya que eso finaliza la suma</p>
+            <input type="number" id="numPositivo" placeholder="Ingresa un número">
+            <button onclick="agregarNumero()">Sumar número</button>
+            <button onclick="reiniciarSuma()">Reiniciar</button>
+            <p id="resultado2">Suma actual: 0</p>
+        </section>
+
+        <section id="ejercicio3" class="ejercicio-section">        
+            <h3>3.Ordenar 3 números</h3>
+            <p>Ingresa los numeros quieras para ordenar</p>
+            <input type="number" id="n1" placeholder="Número 1">
+            <input type="number" id="n2" placeholder="Número 2">
+            <input type="number" id="n3" placeholder="Número 3">
+            <button onclick="ordenarNumeros()">Ordenar</button>
+            <p id="resultado3"></p>
+        </section>
+
+        <section id="ejercicio4" class="ejercicio-section">
+            <h3>4.Cálculo de Importe Neto</h3>
+            <p>Ingresa el Importe Bruto para darte el Importe Neto</p>
+            <input type="number" id="importeBruto" placeholder="Importe bruto">
+            <button onclick="calcularImpuesto()">Calcular</button>
+            <p id="resultado4"></p>
+        </section>
+
+        <section id="ejercicio5" class="ejercicio-section">
+            <h3>5. Cálculo de Sueldo por Antigüedad</h3>
+            <p>Ingresa los años que tienes en al empresa para darte tu Sueldo de Antigüedad</p>
+            <input type="number" id="anosEmpresa" placeholder="Años en la empresa">
+            <button onclick="calcularSueldo()">Calcular Sueldo</button>
+            <p id="resultado5"></p>
+        </section>
+    </div>
+
+    <footer class="mi-footersito">
+        <div class="footer-contenido">
+            <div class="footer-lainfo">
+                <h3>Franschesco de Jesús Navarro Cruz</h3>
+                <p>Estudiante Desarrollado de Software Multiplataforma en la UTL</p>
+                <p>San Francisco del Rincón, Guanajuato, México</p>
+            </div>
+        
+        <div class="footer-abajo">
+            <p>&copy; 2026 Franschesco Navarro. Todos los derechos para mí.</p>
+        </div>
+    </footer>
+
+    <script src="../js/funciones.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>

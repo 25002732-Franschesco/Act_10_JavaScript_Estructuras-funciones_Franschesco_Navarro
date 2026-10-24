@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('../imagenes/una-taza-de-javascript.png') no-repeat center center / cover;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px;
+    background-color: gray;
+}
+
+header a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    background-color: gray;
+
+}
+
+main {
+    text-align: center;
+    background-color: gray;
+}
+
+main h1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+    background-color: gray;
+}
+
+.bottom-nav {
+    display: flex;
+    background: rgba(0, 0, 0, 0.6);
+
+}
+
+.bottom-nav a {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border-right: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.bottom-nav a:last-child {
+    border-right: none;
+}
+
+.texto {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}

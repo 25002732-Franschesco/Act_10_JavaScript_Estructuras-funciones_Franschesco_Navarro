@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/p3.css">
+</head>
+<body>
+    
+    <button onclick="toggleLogin()" class="menu-btn">☰</button>
+
+    <div id="cajaLogin" class="menu-oculto">
+        <p>Correo:</p>
+        <input type="email" id="correoInput" placeholder="Ingresa correo">
+        
+        <p>Contraseña:</p>
+        <input type="password" id="passInput" placeholder="Ingresa contraseña">
+        
+        <button onclick="entrarAlMenu()" class="btn-login">Iniciar Sesión</button>
+    </div>
+
+    <nav id="sidebar" class="sidebar">
+        <ul class="navigation">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="../html/parteI.html">Parte I</a></li>
+            <li><a href="../html/parteII.html">Parte II</a></li>
+            <li><a href="../html/parteIII.html">Parte III</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="intro-section">
+        <h1>Parte III: Ejercicios con Arrays</h1>
+        <p>Parte de Ejercicios con Funciones Java</p>
+        
+        <div class="botones-menu">
+            <a href="#ejercicio1" class="btn-ejercicio">Ejercicio 1: Pop</a>
+            <a href="#ejercicio2" class="btn-ejercicio">Ejercicio 2: Shift</a>
+            <a href="#ejercicio3" class="btn-ejercicio">Ejercicio 3: Push</a>
+            <a href="#ejercicio4" class="btn-ejercicio">Ejercicio 4: Unshift</a>
+            <a href="#ejercicio5" class="btn-ejercicio">Ejercicio 5: Splice</a>
+            
+        </div>
+        <div class="botones-menu">
+            <a href="#ejercicio6" class="btn-ejercicio">Ejercicio 6: Delete</a>
+            <a href="#ejercicio7" class="btn-ejercicio">Ejercicio 7: Reverse</a>
+            <a href="#ejercicio8" class="btn-ejercicio">Ejercicio 8: Sort</a>
+            <a href="#ejercicio9" class="btn-ejercicio">Ejercicio 9: Concat</a>
+            <a href="#ejercicio10" class="btn-ejercicio">Ejercicio 10: Join</a>
+            <a href="#ejercicio11" class="btn-ejercicio">Ejercicio 11: Length</a>
+        </div>
+    </section>
+
+
+
+    <div class="ejerciciostotal">
+        <section class="intro-section">
+            <h1>Arreglo que Usaremos</h1>
+            <p>[México, Peru, Colombia, Argentina, Panama, Cuba, Portugal, Chile, Venezuela, Guatemala]</p>
+            <p>Si deseas agregar un país, ingresa su nombre en el campo de Push y haz clic en el botón "Mostrar"</p>
+        </section>
+
+        <section id="ejercicio1" class="ejercicio-section">
+            <h3>Pop</h3>
+            <p>Elimina el último elemento del arreglo y reduce su tamaño en uno</p>
+            <button onclick="Pop()">Mostrar</button>
+            <p id="resultadoarreglo1"></p>
+        </section>
+        
+        <section id="ejercicio2" class="ejercicio-section">
+            <h3>Shift</h3>
+            <button onclick="Shift()">Mostrar</button>
+            <p id="resultadoarreglo2"></p>
+        </section>
+
+        <section id="ejercicio3" class="ejercicio-section">
+            <h3>Push</h3>
+            <input type="text" id="textpush" placeholder="Ingresa el país a agregar">
+            <button onclick="Push()">Agregar y Mostrar</button>
+            <p id="resultadoarreglo3"></p>
+        </section>
+
+        <section id="ejercicio4" class="ejercicio-section">
+            <h3>Unshift</h3>
+            <input type="text" id="textunshift" placeholder="Ingresa el país a agregar">
+            <button onclick="Unshift()">Agregar y Mostrar</button>
+            <p id="resultadoarreglo4"></p>
+        </section>
+
+        <section id="ejercicio5" class="ejercicio-section">
+            <h3>Splice</h3>
+            <input type="number" id="lugarSplice" placeholder="Ingresa el índice para añadir o eliminar">
+            <input type="text" id="nuevoPaisSplice" placeholder="Ingresa el país a añadir">
+            <button onclick="Splice()">Añadir</button>
+            <p id="resultadoarreglo5"></p>
+        </section>
+
+        <section id="ejercicio6" class="ejercicio-section">
+            <h3>Delete</h3>
+            <input type="number" id="lugarDelete" placeholder="Ingresa el índice del país a borrar">
+            <button onclick="Delete()">Borrar</button>
+            <p id="resultadoarreglo6"></p>
+        </section>
+
+        <section id="ejercicio7" class="ejercicio-section">
+            <h3>Reverse</h3>
+            <button onclick="Reverse()">Mostrar</button>
+            <p id="resultadoarreglo7"></p>
+        </section>
+
+        <section id="ejercicio8" class="ejercicio-section">
+            <h3>Sort</h3>
+            <button onclick="Sort()">Mostrar</button>
+            <p id="resultadoarreglo8"></p>
+        </section>
+
+        <section id="ejercicio9" class="ejercicio-section">
+            <h3>Concat</h3>
+            <button onclick="Concat()">Mostrar</button>
+            <p id="resultadoarreglo9"></p>
+        </section>
+
+        <section id="ejercicio10" class="ejercicio-section">
+            <h3>Join</h3>
+            <button onclick="Join()">Mostrar</button>
+            <p id="resultadoarreglo10"></p>
+        </section>
+
+        <section id="ejercicio11" class="ejercicio-section">
+            <h3>Length</h3>
+            <button onclick="Length()">Mostrar</button>
+            <p id="resultadoarreglo11"></p>
+        </section>
+     </div>
+
+     <footer class="mi-footersito">
+        <div class="footer-contenido">
+            <div class="footer-lainfo">
+                <h3>Franschesco de Jesús Navarro Cruz</h3>
+                <p>Estudiante Desarrollado de Software Multiplataforma en la UTL</p>
+                <p>San Francisco del Rincón, Guanajuato, México</p>
+            </div>
+        
+        <div class="footer-abajo">
+            <p>&copy; 2026 Franschesco Navarro. Todos los derechos para mí.</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/funciones.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>
